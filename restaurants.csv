@@ -1,0 +1,24 @@
+name,cuisine,average_price,suburb,latitude,longitude,rating,dietary
+Sakura Sushi House,Japanese,28,Haymarket,-33.8793,151.205,4.6,Gluten-Free
+Tokyo Table,Japanese,38,Sydney CBD,-33.8702,151.2078,4.5,Vegetarian
+Ramen Corner,Japanese,24,Chinatown,-33.8774,151.2056,4.3,Any
+Osaka Kitchen,Japanese,32,Surry Hills,-33.8844,151.2122,4.7,Vegan
+Noodle Garden,Chinese,22,Chinatown,-33.8778,151.2052,4.2,Vegetarian
+Golden Dragon,Chinese,35,Haymarket,-33.88,151.2045,4.5,Gluten-Free
+Red Lantern Kitchen,Chinese,42,Surry Hills,-33.8838,151.2114,4.6,Any
+Seoul Table,Korean,30,Haymarket,-33.8788,151.2042,4.4,Any
+Korean Garden,Korean,36,Chinatown,-33.8769,151.2062,4.7,Gluten-Free
+Kimchi Kitchen,Korean,27,Sydney CBD,-33.871,151.208,4.3,Vegetarian
+Bangkok Corner,Thai,25,Haymarket,-33.8802,151.2055,4.4,Vegan
+Thai Garden,Thai,32,Surry Hills,-33.8839,151.213,4.6,Gluten-Free
+Siam Kitchen,Thai,29,Sydney CBD,-33.8698,151.21,4.2,Vegetarian
+Roma Table,Italian,39,Sydney CBD,-33.8679,151.2088,4.5,Vegetarian
+Little Italy Kitchen,Italian,34,Surry Hills,-33.885,151.211,4.7,Vegan
+Pasta Corner,Italian,26,Haymarket,-33.8798,151.2038,4.1,Any
+Saigon Kitchen,Vietnamese,23,Haymarket,-33.8787,151.2057,4.6,Gluten-Free
+Pho Garden,Vietnamese,20,Chinatown,-33.877,151.205,4.4,Any
+Hanoi Table,Vietnamese,31,Surry Hills,-33.884,151.214,4.7,Vegan
+Green Garden,Vegetarian,24,Surry Hills,-33.8835,151.2125,4.8,Vegan
+Plant Table,Vegetarian,29,Sydney CBD,-33.869,151.209,4.6,Gluten-Free
+Veggie Corner,Vegetarian,21,Haymarket,-33.879,151.204,4.3,Vegetarian
+Green Bowl,Vegetarian,26,Chinatown,-33.8768,151.2058,4.5,Vegan
