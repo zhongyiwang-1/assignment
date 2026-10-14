@@ -3,6 +3,7 @@ import math
 import tkinter as tk
 from tkinter import ttk, messagebox
 
+# Coordinates used for distance calculations
 SUBURB_COORDINATES = {
     "sydney cbd": (-33.8688, 151.2093),
     "haymarket": (-33.8793, 151.2050),
@@ -10,6 +11,7 @@ SUBURB_COORDINATES = {
     "surry hills": (-33.8844, 151.2122)
 }
 
+# Load restaurant data from the CSV file
 def load_restaurants(filename):
     restaurants = []
     try:
@@ -24,6 +26,7 @@ def load_restaurants(filename):
         messagebox.showerror("File Error", "restaurants.csv could not be found.")
     return restaurants
 
+# Calculate distance between two locations in kilometres
 def calculate_distance(lat1, lon1, lat2, lon2):
     earth_radius = 6371
     lat1, lon1 = math.radians(lat1), math.radians(lon1)
@@ -36,6 +39,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return earth_radius * c
 
+# Filter restaurants using the user's preferences
 def filter_restaurants(restaurants, cuisine, budget, suburb,
                        max_distance, minimum_rating, dietary):
     matches = []
@@ -61,6 +65,7 @@ def filter_restaurants(restaurants, cuisine, budget, suburb,
             matches.append(result)
     return matches
 
+# Sort the matching restaurants
 def sort_restaurants(restaurants, sort_by):
     if sort_by == "Distance":
         restaurants.sort(key=lambda item: item["distance"])
@@ -70,6 +75,7 @@ def sort_restaurants(restaurants, sort_by):
         restaurants.sort(key=lambda item: item["average_price"])
     return restaurants
 
+# Main graphical user interface
 class RestaurantFinderApp:
     def __init__(self, root):
         self.root = root
@@ -86,6 +92,7 @@ class RestaurantFinderApp:
         ).grid(row=row+1, column=column, sticky="ew",
                padx=8, pady=(4, 12))
 
+# Create the labels, inputs and buttons
     def build_interface(self):
         ttk.Label(
             self.root, text="Smart Travelling Restaurant Finder",
@@ -147,6 +154,7 @@ class RestaurantFinderApp:
         self.output = tk.Text(self.root, wrap="word", height=15)
         self.output.pack(fill="both", expand=True, padx=38, pady=(0, 25))
 
+# Read user input and search for matching restaurants
     def find_restaurants(self):
         try:
             budget = float(self.budget_var.get())
@@ -171,6 +179,7 @@ class RestaurantFinderApp:
         matches = sort_restaurants(matches, self.sort_var.get())
         self.display_results(matches, budget, max_distance, minimum_rating)
 
+# Display matching restaurants in the results area
     def display_results(self, matches, budget, max_distance, minimum_rating):
         self.output.delete("1.0", tk.END)
 
@@ -202,6 +211,7 @@ class RestaurantFinderApp:
             text += "\n\n" + "-" * 55 + "\n\n"
             self.output.insert(tk.END, text)
 
+# Reset all filters to their default values
     def reset_filters(self):
         self.suburb_var.set("Haymarket")
         self.cuisine_var.set("Any")
@@ -214,6 +224,7 @@ class RestaurantFinderApp:
             text="Choose preferences and click Find Restaurants.")
         self.output.delete("1.0", tk.END)
 
+# Start the application
 def main():
     root = tk.Tk()
     RestaurantFinderApp(root)
